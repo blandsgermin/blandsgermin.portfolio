@@ -1,16 +1,14 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Archivo", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: hwb(0 92% 2%);
+    font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+    background: linear-gradient(135deg, #fbeaea, #f3d5d5, #f8e1e1); 
+    color: #400000;
+    line-height: 1.6;
 }
 
 .container {
@@ -81,5 +79,4 @@ nav ul li a.active {
     color: #a83232; 
     font-weight: bold;
 }
-
 
