@@ -7,30 +7,35 @@
   <link rel="stylesheet" href="js.css">
 </head>
 <body>
-  <div class="container">
+
+  <!-- HEADER / NAVIGATION -->
+  <header>
+    <div class="logo">OBESO</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="javas.html" class="active">Box</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <div class="container" style="margin-top: 120px;">
     <h1>Change the Box Color!</h1>
 
     <div class="box" id="colorBox"></div>
 
-    <!-- Button to change color -->
     <button class="btn" onclick="changeColor()">Change Color</button>
-
-    <!-- Button to go back home -->
-    <button class="btn" onclick="goHome()" style="margin-top: 15px;">Home</button>
   </div>
 
   <script>
-    // Function to change box color
     function changeColor() {
       const box = document.getElementById("colorBox");
       const colors = ["maroon", "black", "white", "gray", "pink"];
       const randomColor = colors[Math.floor(Math.random() * colors.length)];
       box.style.backgroundColor = randomColor;
-    }
-
-    // Function to go back to home page
-    function goHome() {
-      window.location.href = "index.html";
     }
   </script>
 </body>
