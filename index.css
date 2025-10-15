@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +7,7 @@
 
 body {
     font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
-    background: linear-gradient(135deg, #fbeaea, #f3d5d5, #f8e1e1); /* soft maroon gradient */
+    background: linear-gradient(135deg, #fbeaea, #f3d5d5, #f8e1e1); 
     color: #400000;
     line-height: 1.6;
 }
@@ -31,7 +32,7 @@ header {
 header .logo {
     font-size: 1.7rem;
     font-weight: bold;
-    color: #5a0000; /* dark maroon */
+    color: #5a0000; 
     font-family: Georgia, serif;
 }
 nav ul {
@@ -47,11 +48,10 @@ nav ul li a {
 }
 nav ul li a:hover,
 nav ul li a.active {
-    color: #a83232; /* lighter maroon on hover */
+    color: #a83232; 
     font-weight: bold;
 }
 
-/* Hero Section */
 .hero {
     display: flex;
     justify-content: space-between;
@@ -68,7 +68,6 @@ nav ul li a.active {
     margin-bottom: 12px;
 }
 
-/* Name Glow */
 .name-effect {
     color: #b80f0f;
     animation: glow-text 2s infinite alternate;
@@ -79,11 +78,10 @@ nav ul li a.active {
     to { text-shadow: 0 0 20px #ff8888, 0 0 30px #cc4b4b; }
 }
 
-/* Typing Effect (Gradient Text) */
 .typing {
     font-size: 1.6rem;
     font-weight: bold;
-    background: linear-gradient(90deg, #b80f0f, #a83232, #e04b4b); /* maroon gradient text */
+    background: linear-gradient(90deg, #b80f0f, #a83232, #e04b4b); 
     background-size: 200% 200%;
     -webkit-background-clip: text;
     background-clip: text;
@@ -97,7 +95,6 @@ nav ul li a.active {
     100% { background-position: 0% 50%; }
 }
 
-/* Social Icons */
 .social-icons {
     margin: 15px 0;
 }
@@ -112,7 +109,6 @@ nav ul li a.active {
     color: #e04b4b;
 }
 
-/* Hero Image - Circle Profile Picture */
 .hero-img {
     flex: 1;
     display: flex;
@@ -129,12 +125,11 @@ nav ul li a.active {
     border: 8px solid #b80f0f;
     box-shadow: 0 0 25px rgba(184, 15, 15, 0.5),
                 0 0 50px rgba(184, 15, 15, 0.3);
-    animation: floatImage 5s ease-in-out infinite;
+
     z-index: 2;
     margin-left: 70px;
 }
 
-/* Glow behind the circle */
 .hero-img::before {
     content: "";
     position: absolute;
@@ -149,7 +144,6 @@ nav ul li a.active {
     margin-left: 70px;
 }
 
-/* Animations */
 @keyframes floatImage {
     0% { transform: translateY(0); }
     50% { transform: translateY(-15px); }
@@ -160,7 +154,7 @@ nav ul li a.active {
     100% { transform: scale(1.08); opacity: 1; }
 }
 
-/* Buttons */
+
 .btn {
     display: inline-block;
     padding: 12px 25px;
@@ -188,7 +182,7 @@ nav ul li a.active {
     flex-direction: column;
     gap: 15px;
 }
-.contact input, .contact textarea {
+.contact input, .contact texta  rea {
     padding: 10px;
     font-size: 1rem;
     border: 1px solid #ccc;
@@ -202,4 +196,20 @@ nav ul li a.active {
     margin-top: 15px;
     color: green;
     font-weight: bold;
+}
+
+#about {
+  max-width: 600px;            
+  margin: 40px auto;           
+  padding: 30px;               
+  background-color: #fff8f8;  
+  border: 2px solid #b80f0f;   
+  border-radius: 10px;        
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;          
+}
+
+#about h2 {
+  margin-top: 0;
+  color: #b80f0f;
 }
