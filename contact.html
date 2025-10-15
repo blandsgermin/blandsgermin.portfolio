@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Blands Germin</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <div class="logo">Blands Portfolio</div>
+    <nav>
+      <ul>
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="index.html#portfolio">Portfolio</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <h2>Contact Me</h2>
+    <p>If you’d liked to talk, please do contact me here. </p>
+
+    <form onsubmit="showMessage(event)">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+
+    <p id="success-message" class="hidden">Thank you! Your message has been sent.</p>
+
+    <div class="social-icons" style="margin-top:20px;">
+      <a href="mailto:blandsobeso06@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a href="tel:+639926959140"><i class="fas fa-phone"></i></a>
+      <a href="https://facebook.com/blandsgermin" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com/blandsgermin_" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Blands Germin R. Obeso | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    function showMessage(e) {
+      e.preventDefault();
+      document.getElementById("success-message").classList.remove("hidden");
+    }
+  </script>
+</body>
+</html>

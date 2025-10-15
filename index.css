@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+    background: linear-gradient(135deg, #fbeaea, #f3d5d5, #f8e1e1); /* soft maroon gradient */
+    color: #400000;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, serif;
+    letter-spacing: 1px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 60px;
+    background: rgba(80, 0, 0, 0.4); /* maroon overlay */
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+header .logo {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #5a0000; /* dark maroon */
+    font-family: Georgia, serif;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+nav ul li a {
+    color: #400000;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+nav ul li a:hover,
+nav ul li a.active {
+    color: #a83232; /* lighter maroon on hover */
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 140px 60px;
+    min-height: 100vh;
+}
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+.hero-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+}
+
+/* Name Glow */
+.name-effect {
+    color: #b80f0f;
+    animation: glow-text 2s infinite alternate;
+    font-family: Georgia, serif;
+}
+@keyframes glow-text {
+    from { text-shadow: 0 0 8px #cc4b4b; }
+    to { text-shadow: 0 0 20px #ff8888, 0 0 30px #cc4b4b; }
+}
+
+/* Typing Effect (Gradient Text) */
+.typing {
+    font-size: 1.6rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #b80f0f, #a83232, #e04b4b); /* maroon gradient text */
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientMove 4s ease infinite;
+    font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+}
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Social Icons */
+.social-icons {
+    margin: 15px 0;
+}
+.social-icons a {
+    color: #7a0000;
+    margin-right: 15px;
+    font-size: 1.4rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #e04b4b;
+}
+
+/* Hero Image - Circle Profile Picture */
+.hero-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero-img img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 8px solid #b80f0f;
+    box-shadow: 0 0 25px rgba(184, 15, 15, 0.5),
+                0 0 50px rgba(184, 15, 15, 0.3);
+    animation: floatImage 5s ease-in-out infinite;
+    z-index: 2;
+    margin-left: 70px;
+}
+
+/* Glow behind the circle */
+.hero-img::before {
+    content: "";
+    position: absolute;
+    width: 390px;
+    height: 390px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #f8e1e1, #f3d5d5, #fbeaea);
+    box-shadow: 0 0 60px rgba(184, 15, 15, 0.4),
+                0 0 100px rgba(184, 15, 15, 0.2);
+    z-index: 1;
+    animation: pulseGlow 6s infinite alternate;
+    margin-left: 70px;
+}
+
+/* Animations */
+@keyframes floatImage {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+@keyframes pulseGlow {
+    0% { transform: scale(1); opacity: 0.9; }
+    100% { transform: scale(1.08); opacity: 1; }
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #b80f0f;
+    color: white;
+    font-weight: bold;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.btn:hover {
+    background: #a83232;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #a83232aa;
+}
+
+.contact {
+    max-width: 600px;
+    margin: 100px auto;
+    text-align: center;
+    padding: 20px;
+}
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.contact input, .contact textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+.hidden {
+    display: none;
+}
+#success-message {
+    margin-top: 15px;
+    color: green;
+    font-weight: bold;
+}
