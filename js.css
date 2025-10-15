@@ -1,0 +1,53 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Archivo", sans-serif;
+}
+
+/* Centering */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fdfdfd;
+}
+
+/* Container */
+.container {
+  text-align: center;
+}
+
+/* Title */
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Box */
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: maroon;
+  border-radius: 15px;
+  margin: 0 auto 20px;
+  transition: background-color 0.4s ease;
+}
+
+/* Button */
+.btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: maroon;
+}
