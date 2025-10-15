@@ -7,23 +7,31 @@
   <link rel="stylesheet" href="js.css">
 </head>
 <body>
-
   <div class="container">
-    <h1>Hello, you can click the button to change color!</h1>
-    
-    <div id="colorBox" class="box"></div>
-    
-    <button onclick="changeColor()" class="btn">Change Color</button>
+    <h1>Change the Box Color!</h1>
+
+    <div class="box" id="colorBox"></div>
+
+    <!-- Button to change color -->
+    <button class="btn" onclick="changeColor()">Change Color</button>
+
+    <!-- Button to go back home -->
+    <button class="btn" onclick="goHome()" style="margin-top: 15px;">Home</button>
   </div>
 
   <script>
+    // Function to change box color
     function changeColor() {
       const box = document.getElementById("colorBox");
-      const colors = ["#ffb6c1", "#ff6347", "#90ee90", "#87ceeb", "#dda0dd", "#f5deb3", "#ffa07a", "#ff69b4"];
+      const colors = ["maroon", "black", "white", "gray", "pink"];
       const randomColor = colors[Math.floor(Math.random() * colors.length)];
       box.style.backgroundColor = randomColor;
     }
-  </script>
 
+    // Function to go back to home page
+    function goHome() {
+      window.location.href = "index.html";
+    }
+  </script>
 </body>
 </html>
